@@ -14,6 +14,7 @@ jobs:
                 name: Run SerenityJS BDD Test
                 command: npm test
             - run: 
+                when: always
                 name: Run Cucumber-JS BDD Test
                 command: npm run cuke
             - run: 
