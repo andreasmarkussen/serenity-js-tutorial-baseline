@@ -42,7 +42,7 @@ exports.config = {
     // },
 
     cucumberOpts: {
-        require: [ 'features/**/*.ts', ],
+        require: [ 'features/serenity/**/*.ts', ],
         'require-module':   [ 'ts-node/register'],
         tags:    ['~@wip'],
         strict:  false,

@@ -1,0 +1,73 @@
+[
+  {
+    "description": "  In order to learn how to use Serenity/JS with Cucumber and Protractor\n  As a Curious Developer\n  I'd like to see an example",
+    "keyword": "Feature",
+    "name": "Super Calculator",
+    "line": 1,
+    "id": "super-calculator",
+    "tags": [],
+    "uri": "features\\super_calculator.feature",
+    "elements": [
+      {
+        "description": "    The [\"Super Calculator\"](https://juliemr.github.io/protractor-demo/) was developed by Julie Ralph,\n    the author of Protractor, to demonstrate what Protractor is capable of.\n\n    By the way, did you notice that with **Serenity/JS** you can use [Markdown](https://en.wikipedia.org/wiki/Markdown)\n    to better describe each `Feature` and `Scenario`?",
+        "id": "super-calculator;an-actor-interacts-with-a-web-page",
+        "keyword": "Scenario",
+        "line": 7,
+        "name": "An actor interacts with a web page",
+        "tags": [],
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "match": {
+              "location": "features\\serenity\\step_definitions\\super_calculator.steps.ts:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 5000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 15,
+            "name": "Callie decides to use the Super Calculator",
+            "result": {
+              "status": "ambiguous"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 16,
+            "name": "she adds 19 and 23",
+            "result": {
+              "status": "ambiguous"
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 17,
+            "name": "she should see that the result is 42",
+            "result": {
+              "status": "ambiguous"
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules\\@serenity-js\\cucumber\\src\\listeners\\cucumber-4.ts:7"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18000000
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

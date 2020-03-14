@@ -9,7 +9,7 @@ import {
     EnterLeftSideOperand,
     EnterRightSideOperand,
     SelectOperator,
-} from '../support/screenplay';
+} from '../screenplay';
 
 Before(() => engage(new Actors()));
 

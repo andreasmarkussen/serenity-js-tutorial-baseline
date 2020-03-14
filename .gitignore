@@ -7,3 +7,6 @@ node_modules
 
 # Build artifacts
 target
+
+# It is on purpose, that a lot of files are added, that normally are ignored.
+# This is not for production use
