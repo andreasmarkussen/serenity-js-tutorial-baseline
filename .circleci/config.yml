@@ -1,0 +1,42 @@
+version: 2.1
+orbs:
+  node: circleci/node@1.1.6
+jobs:
+  build-and-test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      - node/with-cache:
+          steps:
+            - run: npm install
+            - run: 
+                name: Run SerenityJS BDD Test
+                command: npm test
+            - run: 
+                name: Run Cucumber-JS BDD Test
+                command: npm run cuke
+            - run: 
+                name: move test reports
+                when: always
+                command: |
+                  mkdir reports
+                  mkdir reports/cucumber
+                  cp target/serenity/site/*.json reports/cucumber --verbose
+                  cp target/serenity/site/*.cuke reports/cucumber --verbose
+            - store_test_results:
+                path: reports
+            - store_artifacts: # special step to save test results as as artifact
+               # Upload test summary for display in Artifacts: https://circleci.com/docs/2.0/artifacts/ 
+                path: target
+                # prefix: tests
+            # # - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/ 
+            # #     path: coverage
+            # #     prefix: coverage
+            # - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
+            #     path: ~/repo/reports
+      # See https://circleci.com/docs/2.0/deployment-integrations/ for deploy examples
+workflows:
+    build-and-test:
+      jobs:
+        - build-and-test
