@@ -52,6 +52,7 @@
     "chromedriver": "^80.0.1",
     "cucumber": "^6.0.5",
     "is-ci": "^2.0.0",
+    "mkdirp": "^1.0.3",
     "npm-failsafe": "^0.4.1",
     "protractor": "^5.4.3",
     "rimraf": "^3.0.2",
